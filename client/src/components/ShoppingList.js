@@ -4,7 +4,7 @@ import ListGroupItem from "react-bootstrap/ListGroupItem";
 import AddElement from "./AddElement";
 
 function ShoppingList() {
-    const [items, setItems] = useState([{"id": 1,"name": "smth"}, {"id": 2,"name": "smth2"}]);
+    const [items, setItems] = useState([]);
 
     function addItem(element) {
         setItems([...items, element]);
