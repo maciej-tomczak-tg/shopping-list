@@ -7,9 +7,14 @@ function AddElement(props) {
 
     function handleAddElement(e) {
         const newValue = newElementRef.current.value;
+        if (!newValue) {
+            return;
+        }
+
         const newItem = {"id": parseInt(Math.random() * 100), "name": newValue};
 
-        props.setItems([newItem]);
+        props.addItem(newItem);
+        newElementRef.current.value = '';
     }
 
     return (
