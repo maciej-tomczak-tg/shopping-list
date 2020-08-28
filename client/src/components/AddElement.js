@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
+import { v4 as uuid } from "uuid";
 
 function AddElement(props) {
     const newElementRef = useRef();
@@ -11,7 +12,7 @@ function AddElement(props) {
             return;
         }
 
-        const newItem = {"id": parseInt(Math.random() * 100), "name": newValue};
+        const newItem = {"id": uuid(), "name": newValue};
 
         props.addItem(newItem);
         newElementRef.current.value = '';
