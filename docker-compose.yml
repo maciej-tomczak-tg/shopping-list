@@ -9,3 +9,11 @@ services:
     command: npm start
     working_dir: /client/
     stdin_open: true
+  server:
+    image: node:13
+    ports:
+      - 2020:8080
+    volumes:
+      - ./server:/server
+    command: npm start
+    working_dir: /server/
