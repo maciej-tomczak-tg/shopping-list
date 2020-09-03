@@ -15,5 +15,5 @@ services:
       - 2020:8080
     volumes:
       - ./server:/server
-    command: npm start
+    command: npm run dev
     working_dir: /server/
